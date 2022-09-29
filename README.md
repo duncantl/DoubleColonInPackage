@@ -16,6 +16,14 @@ trace("::")
 b1(10, 20)
 ```
 
+```
+trace("::", quote(print(sys.calls())))
+```
+
+So the symbol is dynamically resolved each time it is called, i.e., not resolved at installation or
+byte compiled.
+
+## 
 + We do need to list it in the Imports field in the DESCRIPTION file.
 + We don't need  to import the Apkg package in the NAMESPACE. 
 + Not listing the symbols that are imported makes it harder to know what packages and what symbols
@@ -26,5 +34,8 @@ library(Bpkg)
 i = CodeAnalysis::getGlobals(b1)
 grep("::", i$functions)  # will also find ::: calls.
 ```
+
+Some could be in an `if(FALSE)` or `if(cond)` which is statically known to be FALSE.
+Generally, code analysis can handle these situations.
 
 
