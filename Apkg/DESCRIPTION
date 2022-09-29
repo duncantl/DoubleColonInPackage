@@ -1,0 +1,6 @@
+Package: Apkg
+Version: 0.1-0
+Title: Source of function
+Description: Source of function
+Author: DTL
+Maintainer: DTL <duncan@r-project.org>

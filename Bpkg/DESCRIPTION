@@ -1,0 +1,9 @@
+Package: Bpkg
+Version: 0.1-0
+Title: User of function
+Description: User of function.
+Author: DTL
+Maintainer: DTL <duncan@r-project.org>
+Imports: Apkg
+License: BSD
+
