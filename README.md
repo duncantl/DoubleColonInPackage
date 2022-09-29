@@ -1,8 +1,12 @@
-Exploring what happens when one uses Apkg::Symbol in code in a second package, Bpkg.
+## Exploring what happens when one uses Apkg::Symbol in code in a second package, Bpkg.
 
 + Is the symbol resolved at installation time?
 + is it byte compiled
 + is it dynamically resolved in each call via ::
+
+There are different situations when we might any of these three options to occur.
+
+## Testing
 
 We create two simple packages Apkg and Bpkg. (R doesn't like packages with single-letter names.)
 
